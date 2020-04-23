@@ -1,28 +1,28 @@
-**PRIME AIRTIME**
+**PRIME AIRTIME**<br/>
 
 include "primeairtime.php";
-$pa = new primeairtime();
-echo $pa->get_key();
-echo $pa->reauth_key();
-echo $pa->set_key();
+$pa = new primeairtime();\
+echo $pa->get_key();\
+echo $pa->reauth_key();\
+echo $pa->set_key();\
 
 
-*print_r($pa->accounts());*
+*print_r($pa->accounts());*\
 *print_r($pa->status());*
 
 **BATCH OPERATION**
-> print_r($pa->batch())<br/>
-> print_r($pa->batch("myfeff")); method 1<br/>
+> print_r($pa->batch())\
+> print_r($pa->batch("myfeff")); method 1\
 > $pa->id = "myfeff"; method 2\
 > print_r($pa->batch());\
-> print_r($pa->set_id("myfeff")->batch()); method 3
+> print_r($pa->set_id("myfeff")->batch()); method 3<br/><br/>
 
-**VERIFY TRANSACTION**
-print_r($pa->set_ref("myfeff")->log());
+**VERIFY TRANSACTION**\
+print_r($pa->set_ref("myfeff")->log());<br/><br/>
 
-**AIRTIME/DATA TOPUP**
-$mobile = array("2348063175557");  bulk array("2348183874966","2348183874966");
-print_r($pa->topup(false)->info($mobile));  true airtime, false data
+**AIRTIME/DATA TOPUP**\
+$mobile = array("2348063175557");  bulk array("2348183874966","2348183874966");\
+print_r($pa->topup(false)->info($mobile));  true airtime, false data<br/><br/>
 
 
 **BATCH TOPUP **
