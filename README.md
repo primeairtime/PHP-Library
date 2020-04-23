@@ -11,11 +11,11 @@ echo $pa->set_key();
 *print_r($pa->status());*
 
 **BATCH OPERATION**
-> print_r($pa->batch());
-> print_r($pa->batch("myfeff")); method 1
-> $pa->id = "myfeff"; method 2
-> print_r($pa->batch());
-> print_r($pa->set_id("myfeff")->batch()); method 3
+> print_r($pa->batch());_ _ _
+> print_r($pa->batch("myfeff")); method 1_ _ _
+> $pa->id = "myfeff"; method 2_ _ _
+> print_r($pa->batch());_ _ _
+> print_r($pa->set_id("myfeff")->batch()); method 3_ _ _
 
 **VERIFY TRANSACTION**
 print_r($pa->set_ref("myfeff")->log());
