@@ -1,6 +1,6 @@
 **PRIME AIRTIME**<br/>
 
-**include "primeairtime.php";**\
+**include "primeairtime.php";**
 **$pa = new primeairtime();**<br/><br/>
 > echo $pa->get_key();\
 > echo $pa->reauth_key();\
