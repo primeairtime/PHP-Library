@@ -11,11 +11,11 @@ echo $pa->set_key();
 *print_r($pa->status());*
 
 **BATCH OPERATION**
-print_r($pa->batch());
-print_r($pa->batch("myfeff")); method 1
-$pa->id = "myfeff"; method 2
-print_r($pa->batch());
-print_r($pa->set_id("myfeff")->batch()); method 3
+> print_r($pa->batch());
+> print_r($pa->batch("myfeff")); method 1
+> $pa->id = "myfeff"; method 2
+> print_r($pa->batch());
+> print_r($pa->set_id("myfeff")->batch()); method 3
 
 **VERIFY TRANSACTION**
 print_r($pa->set_ref("myfeff")->log());
@@ -26,7 +26,8 @@ print_r($pa->topup(false)->info($mobile));  true airtime, false data
 
 
 **BATCH TOPUP **
- $requestBody = '{
+ ```
+$requestBody = '{
   "numbers" : [
     {
       "msisdn" : "2348183874966",
@@ -40,6 +41,7 @@ print_r($pa->topup(false)->info($mobile));  true airtime, false data
     }
   ]
 }';
+```
 
 **SINGLE TOPUP**
 $requestBody = '{
