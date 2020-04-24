@@ -4,7 +4,7 @@
 **$pa = new primeairtime();**<br/><br/>
 > echo $pa->get_key();\
 > echo $pa->reauth_key();\
-> echo $pa->set_key();\<br/>
+> echo $pa->set_key();\
 
 
 **ACCOUNT STATUS**\
@@ -13,17 +13,17 @@
 
 **BATCH OPERATION**
 > print_r($pa->batch())\
-> print_r($pa->batch("myfeff")); method 1\
-> $pa->id = "myfeff"; method 2\
+> print_r($pa->batch("myfeff")); **method 1**\
+> $pa->id = "myfeff"; **method 2**\
 > print_r($pa->batch());\
-> print_r($pa->set_id("myfeff")->batch()); method 3<br/><br/>
+> print_r($pa->set_id("myfeff")->batch()); **method 3**<br/><br/>
 
 **VERIFY TRANSACTION**\
 >print_r($pa->set_ref("myfeff")->log());<br/><br/>
 
 **AIRTIME/DATA TOPUP**\
->$mobile = array("2348063175557");  [^bulk array("2348183874966","2348183874966");]\
->print_r($pa->topup(false)->info($mobile));  *true airtime, false data*<br/><br/>
+>$mobile = array("2348063175557");  **Bulk** $mobile = array("2348183874966","2348183874966");\
+>print_r($pa->topup(false)->info($mobile)); ** true airtime, false data**<br/><br/>
 
 
 **BATCH TOPUP **
@@ -55,7 +55,7 @@ $requestBody = '{
         "customer_reference":"RE4534783248234"
     }';
 ```
->print_r($pa->topup(true)->exec($requestBody));  true airtime, false data
+>print_r($pa->topup(true)->exec($requestBody));  **true airtime, false data**
 
 
 **LIST ALL PRODUCT BY PAGE**
