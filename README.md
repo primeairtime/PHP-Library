@@ -64,10 +64,10 @@ $requestBody = '{
 
 
 **BILLS**
-> print_r($pa->billpay()); -*** *Get Country List* ***\
-> print_r($pa->set_iso("NG")->billpay()); -- **List of services in specified country **\
-> print_r($pa->set_iso("NG")->set_service_id("electricity")->billpay());  **List of products available for given service in country  **\
-> print_r($pa->set_service_id("dstv")->set_product_id("BPD-NGCA-AQA")->billpay()); **List of product options available for given service in country (multichoice) **\
+> print_r($pa->billpay()); -*** *Get Country List* ***
+> print_r($pa->set_iso("NG")->billpay()); -- **List of services in specified country **
+> print_r($pa->set_iso("NG")->set_service_id("electricity")->billpay());  **List of products available for given service in country  **
+> print_r($pa->set_service_id("dstv")->set_product_id("BPD-NGCA-AQA")->billpay()); **List of product options available for given service in country (multichoice) **
 > print_r($pa->set_service_id("electricity")->set_product_id("BPE-NGEK-OR")->billpay("027140081201"));  **VALIDATE Bills**</br>
 
 **Perform Electricity topup**
@@ -104,7 +104,7 @@ $requestBodyb = '{
     "customer_reference":"myref"
 }';
 ```
->print_r($pa->set_account("027140081201")->set_service_id("electricity")->billpay($requestBody)); Perform bill topup 
+>print_r($pa->set_account("027140081201")->set_service_id("electricity")->billpay($requestBody)); **Perform bill topup **
 
 
 
