@@ -4,10 +4,10 @@
 **$pa = new primeairtime();**<br/><br/>
 > echo $pa->get_key();\
 > echo $pa->reauth_key();\
-> echo $pa->set_key();\
+> echo $pa->set_key();
 
 
-**ACCOUNT STATUS**\
+**ACCOUNT STATUS**
 >*print_r($pa->accounts());*\
 >*print_r($pa->status());*<br/>
 
@@ -18,12 +18,12 @@
 > print_r($pa->batch());\
 > print_r($pa->set_id("myfeff")->batch()); **method 3**<br/><br/>
 
-**VERIFY TRANSACTION**\
+**VERIFY TRANSACTION**
 >print_r($pa->set_ref("myfeff")->log());<br/><br/>
 
-**AIRTIME/DATA TOPUP**\
+**AIRTIME/DATA TOPUP**
 >$mobile = array("2348063175557");  **Bulk** $mobile = array("2348183874966","2348183874966");\
->print_r($pa->topup(false)->info($mobile)); ** true airtime, false data**<br/><br/>
+>print_r($pa->topup(false)->info($mobile)); ** true airtime, false data** <br/><br/>
 
 
 **BATCH TOPUP **
