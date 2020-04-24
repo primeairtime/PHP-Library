@@ -8,8 +8,8 @@
 
 
 **ACCOUNT STATUS**\
-*print_r($pa->accounts());*\
-*print_r($pa->status());*<br/>
+>*print_r($pa->accounts());*\
+>*print_r($pa->status());*<br/>
 
 **BATCH OPERATION**
 > print_r($pa->batch())\
@@ -45,6 +45,7 @@ $requestBody = '{
 ```
 
 **SINGLE TOPUP**
+```
 $requestBody = '{
         "msisdn" : "2348183874966",
         "product_id": "MFIN-2-OR",
@@ -53,7 +54,8 @@ $requestBody = '{
         "sms_text" : "",
         "customer_reference":"RE4534783248234"
     }';
-print_r($pa->topup(true)->exec($requestBody));  true airtime, false data
+```
+>print_r($pa->topup(true)->exec($requestBody));  true airtime, false data
 
 
 **LIST ALL PRODUCT BY PAGE**
@@ -73,6 +75,7 @@ print_r($pa->topup(true)->exec($requestBody));  true airtime, false data
 $requestBody = "{\"meter\":\"027140081201\",\"prepaid\":true,\"denomination\":\"50\", \"product_id\":\"BPE-NGEK-OR\",\"customer_reference\":\"myreg\"}";
 ```
 >print_r($pa->set_account("027140081201")->set_service_id("electricity")->set_product_id("BPE-NGEK-OR")->billpay($requestBody));** PAY Bills**
+
 **Perform DSTV/Internet/Misc topup**
 ```
 $requestBody = "{\"meter\":\"10441003943\",\"prepaid\":false, \"customer_reference\":\"32983278JsDPO\"}";
